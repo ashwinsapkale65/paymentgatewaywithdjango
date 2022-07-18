@@ -4,6 +4,7 @@ from functools import reduce
 from logging.config import valid_ident
 from multiprocessing import context
 from time import time
+from django.forms import NullBooleanField
 from django.shortcuts import redirect, render,HttpResponse
 import razorpay
 from yoga import settings
@@ -304,4 +305,11 @@ def billtemplate(request):
             return response
       return HttpResponse("Not found")
 
-      
+def studentspaymentpending(request):
+    if request.user.is_anonymous:
+        return redirect("login_view")
+    sinfo = studentpaymentremaining.objects.all()
+    if(sinfo.count() == 0 ):
+        print("no")
+    
+    return render(request,'studentspaymentpending.html',{'sinf' : sinfo})

@@ -1,4 +1,5 @@
 from tracemalloc import start
+from unicodedata import name
 from django import views
 from django.contrib import admin
 from django.urls import path , include
@@ -14,7 +15,8 @@ urlpatterns = [
     path('login_view',views.login_view,name='login_view'),
     path('admindashboard',views.admindashboard,name='admindashboard'),
     path('logoutuser',views.logoutuser,name='logoutuser'),
-    path('billtemplate',views.billtemplate,name='billtemplate')
+    path('billtemplate',views.billtemplate,name='billtemplate'),
+    path('studentspaymentpending',views.studentspaymentpending,name='studentspaymentpending')
     
   
     

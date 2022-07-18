@@ -20,8 +20,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="admindashboard">Admin Home</a>
-            </li>
+                <a class="nav-link" href="admindashboard">Admin Home</a>
+              </li>
             <li class="nav-item">
               <a class="nav-link" href="studentspaymentpending">Payment Pending Students</a>
             </li>
@@ -43,32 +43,26 @@
     <table class="table">
         <thead>
           <tr>
-           
+         
             <th scope="col">Name</th>
             <th scope="col">City</th>
             <th scope="col">Number</th>
-            <th scope="col">Payment Mode</th>
-            <th scope="col">Payment Id</th>
-            <th scope="col">Order Id</th>
-            <th scope="col">Signature</th>
+           
             <th scope="col">Date</th>
-            <th scope="col">Time</th>
+          
 
           </tr>
         </thead>
         <tbody>
             {% for si in sinf  %}
           <tr>
-            
+           
             <td>{{si.name}}</td>
             <td>{{si.city}}</td>
             <td>{{si.number}}</td>
-            <td>{{si.paymentstatus}}</td>
-            <td>{{si.paymentid}}</td>
-            <td>{{si.orderid}}</td>
-            <td>{{si.signature}}</td>
+          
             <td>{{si.date}}</td>
-            <td>{{si.time}}</td>
+            
             
           </tr>
           {% endfor %}
