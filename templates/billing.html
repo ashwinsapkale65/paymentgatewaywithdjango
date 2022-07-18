@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% block title %}
+    <title>Register</title>{% endblock title %}
+  </head>
+  <style>
+    @media (min-width: 1025px) {
+        .h-custom {
+        height: 100vh !important;
+        }
+        }
+        
+    
+  </style>
+  <body>
+    
+    
+    <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+              <div class="card rounded-3">
+                <img src="https://source.unsplash.com/random/400x200/?dance"
+                  class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                  alt="Sample photo">
+                <div class="card-body p-4 p-md-5">
+                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2" align="center">Billing Information</h3>
+                  {% if messages %}
+                  <ul class="messages" style="color: red">
+                    {% for message in messages %}
+                  <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                  {% endfor %}
+                    </ul>
+                    {% endif %}
+      
+                  <form class="px-md-2" height="500px" id="form" method="POST" action="sucess">
+                    {% csrf_token %}
+      
+                    <h5><div class="form-outline mb-4" >
+                        <label>Name : {{resname}}</span></label>
+                       
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label>City : {{rescity}}</span></label>
+                        
+                      </div>
+                      <div class="form-outline mb-4">
+                        <label>Number : {{resnumber}}</label>
+                        
+                      </div></h5>
+                      <h3>
+                        <label>Payment Fess : 1000  </label></h3>
+                        
+                      
+{% comment %}                       
+                      <script>
+                        
+
+                        const namep = sessionStorage.getItem('na-me');
+                        const cityp = sessionStorage.getItem('ci-ty');
+                        const nump = sessionStorage.getItem('num-ber');
+                        document.getElementById('result-name').textContent = namep;
+                        document.getElementById('result-city').textContent = cityp;
+                        document.getElementById('result-number').textContent = nump;
+                        if(namep == "" && cityp == "" && nump == "") 
+                        {
+                            window.location.href="/"
+                        }
+                        
+
+                        
+
+
+                      </script> {% endcomment %}
+                      
+                      
+                      
+                      <script src="https://checkout.razorpay.com/v1/checkout.js" 
+                      data-key="rzp_test_kJAx1NeyGL34KZ" 
+                      data-amount="50000"
+                      data-currency="INR" 
+                      data-order_id="{{razorpay_order_id}}" 
+                      data-buttontext="Click to Pay 1000 ₹"
+                      data-name="Dance Academy"
+                      data-description="Paying To Dance Academy"
+                      data-image="https://source.unsplash.com/random/200x200/?dane" 
+                      
+                      
+                     
+                      data-theme.color="#F37254"></script>
+                      </center>
+
+
+
+
+      
+                 
+      
+                      </div>
+                    </div>
+      
+                  
+      
+                  </form>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+{% endblock body %}
+
+
+
