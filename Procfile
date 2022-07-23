@@ -1,1 +1,1 @@
-web : gunicorn yoga.wsgi --log-file
+web : gunicorn yoga.wsgi --log-file -
