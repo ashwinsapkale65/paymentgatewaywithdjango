@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-otmlu!(v_4z$h6((eus(lyeyti(z1b-#@j-mb-nqm%u7e9a*d!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = FALSE
 
-ALLOWED_HOSTS = ['127.0.0.1','danceeacademy.herokuapp.com']
+ALLOWED_HOSTS = ['danceeacademy.herokuapp.com']
 
 
 # Application definition
