@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from pickle import FALSE
-import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-otmlu!(v_4z$h6((eus(lyeyti(z1b-#@j-mb-nqm%u7e9a*d!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = FALSE
+DEBUG = True
 
-ALLOWED_HOSTS = ['danceeacademy.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -139,7 +139,7 @@ RAZOR_KEY_ID = 'rzp_test_kJAx1NeyGL34KZ'
 RAZOR_KEY_SECRET = 'YlJc87ylXTDWdBq7J2BdPAox'
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-django_heroku.settings(locals())
+
+
