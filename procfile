@@ -1,1 +1,1 @@
-web: gunicorn yoga.wsgi
+web: gunicorn yoga.wsgi 
